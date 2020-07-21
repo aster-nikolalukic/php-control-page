@@ -1,0 +1,10 @@
+
+<div id="output"></div>
+
+<script>
+  var host = 'ws://127.0.0.1:888/websockets.php';
+  var socket = new WebSocket(host);
+  socket.onmessage = function(e) {
+    document.getElementById('output').innerHTML = e.data;
+  };
+</script>
